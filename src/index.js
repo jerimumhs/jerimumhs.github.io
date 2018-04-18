@@ -50,7 +50,7 @@ class JHS extends React.Component {
               Quer falar com a gente? Quer participar? É fácil nos achar. :)
             </Text>
             <Text>
-              <Link href={'https://t.me/JerimumHS'}><i class='fab fa-telegram'></i></Link> | <Link href={'https://twitter.com/JerimumHS'}><i class='fab fa-twitter-square'></i></Link>
+              <Link href={'https://t.me/JerimumHS'}><i className='fab fa-telegram'></i></Link> | <Link href={'https://twitter.com/JerimumHS'}><i className='fab fa-twitter-square'></i></Link>
             </Text>
           </Middle>
         }
@@ -80,6 +80,7 @@ const Text = styled.p`
 
 const Link = styled.a`
   color: #ea9f77;
+  font-size: 20px;
 `;
 
 render(<JHS/>, document.getElementById('jhs'));
