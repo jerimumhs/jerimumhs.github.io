@@ -50,11 +50,7 @@ class JHS extends React.Component {
               Quer falar com a gente? Quer participar? É fácil nos achar. :)
             </Text>
             <Text>
-              <Link href={'https://t.me/JerimumHS'}><i className='fab fa-telegram'></i></Link> | 
-              <Link href={'https://groups.google.com/forum/#!forum/hackerspace-natal'}><i className='fab fa-google'></i></Link> | 
-              <Link href={'https://twitter.com/JerimumHS'}><i className='fab fa-twitter-square'></i></Link> | 
-              <Link href={'https://www.facebook.com/HackerspaceNatal/'}><i className='fab fa-facebook-square'></i></Link> | 
-              <Link href={'https://wiki.hackerspaces.org/Jerimum_HackerSpace'}><i className='fab fa-wikipedia-w'></i></Link>
+              <Link href={'https://t.me/JerimumHS'}><i className='fab fa-telegram'></i></Link> | <Link href={'https://groups.google.com/forum/#!forum/hackerspace-natal'}><i className='fab fa-google'></i></Link> | <Link href={'https://twitter.com/JerimumHS'}><i className='fab fa-twitter-square'></i></Link> | <Link href={'https://www.facebook.com/HackerspaceNatal/'}><i className='fab fa-facebook-square'></i></Link> | <Link href={'https://wiki.hackerspaces.org/Jerimum_HackerSpace'}><i className='fab fa-wikipedia-w'></i></Link>
             </Text>
           </Middle>
         }
