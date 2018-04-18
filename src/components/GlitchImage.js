@@ -5,8 +5,20 @@ class GlitchImage extends React.Component {
 
   constructor(props) {
     super(props);
+
+    this.state = {
+      active: true
+    };
   }
   
+  componentDidMount() {
+    setInterval(() => {
+      this.setState({
+        active: !this.state.active
+      });
+    }, 3000);
+  }
+
   random(size) {
     return Math.floor((Math.random() * 1000) % size);
   }
@@ -50,12 +62,12 @@ class GlitchImage extends React.Component {
 
     & img:nth-child(2) {
       left: ${ left + 2 }px;
-      animation: ${ anim1 } 2s infinite linear alternate-reverse;
+      animation: ${ (props) => props.active ? `${ anim1 } 2s infinite linear alternate-reverse` : `none` };
     };
 
     & img:nth-child(3) {
       left: ${ left - 2 }px;
-      animation: ${ anim2 } 3s infinite linear alternate-reverse;
+      animation: ${ (props) => props.active ? `${ anim2 } 3s infinite linear alternate-reverse` : `none` };
   `;
 
   }
@@ -63,7 +75,7 @@ class GlitchImage extends React.Component {
   render() {
     let Glitchy = this.createAnimations(70, document.body.clientWidth, 230, 0, 20);
     return (
-      <Glitchy>
+      <Glitchy active={this.state.active}>
         <Image src={ this.props.src }/>
         <Image filter={`hue`} src={ this.props.src }/>
         <Image filter={`gray`} src={ this.props.src }/>

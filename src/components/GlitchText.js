@@ -5,8 +5,21 @@ class GlitchText extends React.Component {
 
   constructor(props) {
     super(props);
+
+    this.state = {
+      active: true
+    };
+
   }
   
+  componentDidMount() {
+    setInterval(() => {
+      this.setState({
+        active: !this.state.active
+      });
+    }, 2500);
+  }
+
   random(size) {
     return Math.floor((Math.random() * 1000) % size);
   }
@@ -43,12 +56,12 @@ class GlitchText extends React.Component {
         &:after {
           left: 2px;
           text-shadow: -1px 0 ${highlightColor1};
-          animation: ${anim1} 2s infinite linear alternate-reverse;
+          animation: ${ (props) => props.active ? `${ anim1 } 2s infinite linear alternate-reverse` : `none` };
         };
         &:before {
           left: -2px;
           text-shadow: 2px 0 ${highlightColor2}; 
-          animation: ${anim2} 3s infinite linear alternate-reverse;
+          animation: ${ (props) => props.active ? `${ anim2 } 3s infinite linear alternate-reverse` : `none` };
         };
   `;
 
@@ -71,14 +84,13 @@ class GlitchText extends React.Component {
       text = text.replace(regex, sheet[char]);
     }
 
-    console.log(text);
     return text;
   }
 
   render() {
-    let Glitchy = this.createAnimations(20, document.body.clientWidth, 50, 'white', 'black', 'red', 'green', this.props.fakeEncription ? this.fakeHackedCode(this.props.text) : this.props.text);
+    let Glitchy = this.createAnimations(20, document.body.clientWidth, 100, 'white', 'black', 'red', 'green', this.props.fakeEncription ? this.fakeHackedCode(this.props.text) : this.props.text);
     return (
-      <Glitchy>
+      <Glitchy active={this.state.active}>
         { this.props.text }
       </Glitchy>
     );
