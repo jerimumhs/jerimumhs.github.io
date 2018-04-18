@@ -38,7 +38,7 @@ class JHS extends React.Component {
           this.state.isBoot?
           <Boot delay={1000} texts={this.texts} onBootEnd={ () => { this.onBootEnd() } } />:
           <Middle>
-            <GlitchImage src={'/dist/img/logo.svg'}/>
+            <GlitchImage src={'dist/img/logo.svg'}/>
             <GlitchText text={'JERIMUM HACKERSPACE'} fakeEncription={true}/>
             <Text>
               Somos um grupo de pessoas interessadas em usar, remixar e compartilhar tecnologia, aprendizado, diversão e cultura de forma colaborativa e indiscriminada.
