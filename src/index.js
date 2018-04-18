@@ -50,7 +50,7 @@ class JHS extends React.Component {
               Quer falar com a gente? Quer participar? É fácil nos achar. :)
             </Text>
             <Text>
-              <Link href={'https://t.me/JerimumHS'}>TELEGRAM</Link> | <Link href={'https://twitter.com/JerimumHS'}>TWITTER</Link>
+              <Link href={'https://t.me/JerimumHS'}><i class='fab fa-telegram'></i></Link> | <Link href={'https://twitter.com/JerimumHS'}><i class='fab fa-twitter-square'></i></Link>
             </Text>
           </Middle>
         }
