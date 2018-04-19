@@ -37,7 +37,7 @@ class JHS extends React.Component {
     return (
       <Body>
         { 
-          !this.state.isBoot?
+          this.state.isBoot?
           <Boot delay={1000} texts={this.texts} onBootEnd={ () => { this.onBootEnd() } } />:
           <Middle>
             <GlitchImage src={'dist/img/logo.svg'}/>
