@@ -4,7 +4,9 @@ import styled from 'styled-components';
 
 import GlitchText from '@components/GlitchText';
 import Boot from '@components/Boot';
-import GlitchImage from './components/GlitchImage';
+import GlitchImage from '@components/GlitchImage';
+import Translate from '@components/Translate';
+import { translate, setLang, langKeys } from '@translations/list';
 
 class JHS extends React.Component {
   
@@ -24,34 +26,42 @@ class JHS extends React.Component {
     });
   }
 
-  texts = [
-    'loading...',
-    'community.h',
-    'good_people.h',
-    'hacking_stuff.h',
-    'your_help.h'
-  ]
+  changeLang(lang) {
+    setLang(lang);
+    this.forceUpdate();
+  }
+
+  texts = translate('boot')
+  
   render() {
     return (
       <Body>
         { 
-          this.state.isBoot?
+          !this.state.isBoot?
           <Boot delay={1000} texts={this.texts} onBootEnd={ () => { this.onBootEnd() } } />:
           <Middle>
             <GlitchImage src={'dist/img/logo.svg'}/>
             <GlitchText text={'JERIMUM HACKERSPACE'} fakeEncription={true}/>
+            
             <Text>
-              Somos um grupo de pessoas interessadas em usar, remixar e compartilhar tecnologia, aprendizado, diversão e cultura de forma colaborativa e indiscriminada.
+              <Translate translation={'paragraphOne'}/>
             </Text>
             <Text>
-              Temos como prioridade estratégica a manutenção de um hackerspace em Natal/RN para concretizar essas aspirações.
+              <Translate translation={'paragraphTwo'}/>
             </Text>
             <Text>
-              Quer falar com a gente? Quer participar? É fácil nos achar. :)
+              <Translate translation={'paragraphThree'}/>
             </Text>
             <Text>
               <Link href={'https://t.me/JerimumHS'}><i className='fab fa-telegram'></i></Link> | <Link href={'https://twitter.com/JerimumHS'}><i className='fab fa-twitter-square'></i></Link>
             </Text>
+            <Footer>
+              | { langKeys.map(((lang, key) => (
+                <span>
+                  <Link key={key} href="javascript:void(0)" onClick={ () => { this.changeLang(lang) } }>{translate('languageName', lang)}</Link> |&nbsp;
+                </span>
+              ))) }
+            </Footer>
           </Middle>
         }
       </Body>
@@ -82,5 +92,16 @@ const Link = styled.a`
   color: #ea9f77;
   font-size: 20px;
 `;
+
+const Footer = styled.div`
+  margin-top: 40px;
+  width: 100%:
+  text-align: center;
+  line-height: 20px;
+  vertical-align: middle;
+  & a {
+    font-size: 15px;
+  }
+`
 
 render(<JHS/>, document.getElementById('jhs'));

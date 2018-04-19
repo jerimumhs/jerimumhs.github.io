@@ -11,7 +11,8 @@ var SRC_DIR = path.resolve(__dirname, 'src/');
 var config = {
     resolve: {
       alias: {
-        '@components': path.resolve(SRC_DIR, 'components')
+        '@components': path.resolve(SRC_DIR, 'components'),
+        '@translations': path.resolve(SRC_DIR, 'translations')
       }
     },
     entry: {
