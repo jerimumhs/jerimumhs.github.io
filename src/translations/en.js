@@ -7,7 +7,8 @@ export default {
     'hacking_stuff.h',
     'your_help.h'
   ],
-  paragraphOne: 'We are a group of people interested in use, mix and share technology, knowledge, fun and culture in a colaborative and indiscriminate way.',
-  paragraphTwo: 'Our strategic priority the maintenance of a hackerspace at Natal/RN Brazil, to build our aspirations.',
-  paragraphThree: `Do you wanna talk with us? Be part of this amazing thing? it's easy to find. :)`
+  paragraphOne: 'We are a group of people interested in using, mixing and sharing technology, knowledge, fun and culture in a collaborative and indiscriminate way.',
+  paragraphTwo: 'Our strategic priority is the maintenance of a hackerspace in Natal/RN - Brazil, to accomplish our aspirations.',
+  paragraphThree: `Want to talk to us? Be part of this amazing thing? It's easy to find us!`
 }
+
