@@ -52,13 +52,13 @@ class JHS extends React.Component {
             <Text>
               <Translate translation={'paragraphThree'}/>
             </Text>
-            <Text>
+            <Links>
               <Link href={'https://wiki.hackerspaces.org/Jerimum_HackerSpace'}><i className='fab fa-wikipedia-w'></i></Link> | 
               <Link href={'https://t.me/JerimumHS'}><i className='fab fa-telegram'></i></Link> | 
               <Link href={'https://twitter.com/JerimumHS'}><i className='fab fa-twitter-square'></i></Link> | 
               <Link href={'https://www.facebook.com/HackerspaceNatal'}><i className='fab fa-facebook-square'></i></Link> | 
               <Link href={'https://groups.google.com/forum/#!forum/hackerspace-natal'}><i className='fab fa-google'></i></Link>
-            </Text>
+            </Links>
             <Footer>
               | { langKeys.map(((lang, key) => (
                 <span>
@@ -92,13 +92,24 @@ const Text = styled.p`
   margin: 20px auto;
 `;
 
+const Links = styled.div`
+  max-width: 800px;
+  margin: 40px auto 0 auto;
+  vertical-align: middle;
+  font-size: 22px;
+
+  & a {
+    margin-left: 10px;
+  }
+`;
+
 const Link = styled.a`
   color: #ea9f77;
   font-size: 20px;
 `;
 
 const Footer = styled.div`
-  margin-top: 40px;
+  margin-top: 20px;
   width: 100%:
   text-align: center;
   line-height: 20px;
