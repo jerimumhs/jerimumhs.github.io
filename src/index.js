@@ -9,7 +9,7 @@ import Translate from '@components/Translate';
 import { translate, setLang, langKeys } from '@translations/list';
 
 class JHS extends React.Component {
-  
+
   constructor(props) {
     super(props);
 
@@ -32,17 +32,17 @@ class JHS extends React.Component {
   }
 
   texts = translate('boot')
-  
+
   render() {
     return (
       <Body>
-        { 
+        {
           this.state.isBoot?
           <Boot delay={1000} texts={this.texts} onBootEnd={ () => { this.onBootEnd() } } />:
           <Middle>
             <GlitchImage src={'dist/img/logo.svg'}/>
             <GlitchText text={'JERIMUM HACKERSPACE'} fakeEncription={true}/>
-            
+
             <Text>
               <Translate translation={'paragraphOne'}/>
             </Text>
@@ -53,10 +53,11 @@ class JHS extends React.Component {
               <Translate translation={'paragraphThree'}/>
             </Text>
             <Links>
-              <Link href={'https://wiki.hackerspaces.org/Jerimum_HackerSpace'}><i className='fab fa-wikipedia-w'></i></Link> | 
-              <Link href={'https://t.me/JerimumHS'}><i className='fab fa-telegram'></i></Link> | 
-              <Link href={'https://twitter.com/JerimumHS'}><i className='fab fa-twitter-square'></i></Link> | 
-              <Link href={'https://www.facebook.com/HackerspaceNatal'}><i className='fab fa-facebook-square'></i></Link> | 
+              <Link href={'https://wiki.hackerspaces.org/Jerimum_HackerSpace'}><i className='fab fa-wikipedia-w'></i></Link> |
+              <Link href={'https://t.me/JerimumHS'}><i className='fab fa-telegram'></i></Link> |
+              <Link href={'https://twitter.com/JerimumHS'}><i className='fab fa-twitter-square'></i></Link> |
+              <Link href={'https://www.facebook.com/HackerspaceNatal'}><i className='fab fa-facebook-square'></i></Link> |
+              <Link href={'https://instagram.com/jerimumhs'}><i className='fab fa-instagram'></i></Link> |
               <Link href={'https://groups.google.com/forum/#!forum/hackerspace-natal'}><i className='fab fa-google'></i></Link>
             </Links>
             <Footer>
