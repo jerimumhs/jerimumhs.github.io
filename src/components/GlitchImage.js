@@ -76,7 +76,7 @@ class GlitchImage extends React.Component {
     let Glitchy = this.createAnimations(70, document.body.clientWidth, 230, 0, 20);
     return (
       <Glitchy active={this.state.active}>
-        <Image src={ this.props.src }/>
+        <Image alt={this.props.alt} src={ this.props.src }/>
         <Image filter={`hue`} src={ this.props.src }/>
         <Image filter={`gray`} src={ this.props.src }/>
       </Glitchy>
