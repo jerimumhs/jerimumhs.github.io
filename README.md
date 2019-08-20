@@ -16,6 +16,10 @@ Como ajudar?
 
 - [traduções](#traduções)
 
+## Como rodar o projeto
+
+Certifique-se que sua versão do node é ">=4 <=9", depois utilize o comando "yarn" para instalar os pacotes do node e "yarn dev" para utilizar o ambiente de desenvolvimento.
+
 ## Traduções
 Crie um arquivo `.js` com a tradução.
 ```
