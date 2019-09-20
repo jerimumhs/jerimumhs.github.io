@@ -1,5 +1,5 @@
-import React from 'react';
-import list, { translate } from '@translations/list';
+import React from "react";
+import list, { translate } from "@translations/list";
 
 class Translate extends React.Component {
   constructor(props) {
@@ -7,9 +7,7 @@ class Translate extends React.Component {
   }
 
   render() {
-    return (
-      <span> { translate(this.props.translation, this.props.lang) } </span>
-    )
+    return <span> {translate(this.props.translation, this.props.lang)} </span>;
   }
 }
 
