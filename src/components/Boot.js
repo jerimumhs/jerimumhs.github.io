@@ -1,13 +1,12 @@
-import React from 'react';
+import React from "react";
 class Boot extends React.Component {
   constructor(props) {
     super(props);
 
     this.state = {
-      texts: [...props.texts, ''] || [],
+      texts: [...props.texts, ""] || [],
       current: 0
-    }
-
+    };
   }
 
   componentDidMount() {
@@ -19,17 +18,21 @@ class Boot extends React.Component {
         }
       }
 
-      this.setState({
-        ...this.state,
-        current: this.state.current + 1
-      })
-
+      !this.booted &&
+        this.setState({
+          ...this.state,
+          current: this.state.current + 1
+        });
     }, this.props.delay || 500);
+  }
+
+  componentWillUnmount() {
+    this.booted = true;
   }
 
   display() {
     if (this.state.texts.length === 0) {
-      return <p> BOOT ERROR... </p>
+      return <p> BOOT ERROR... </p>;
     }
 
     let texts = [];
@@ -41,11 +44,7 @@ class Boot extends React.Component {
   }
 
   render() {
-    return (
-      <div>
-        { this.display() }
-      </div>
-    )
+    return <div>{this.display()}</div>;
   }
 }
 
