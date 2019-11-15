@@ -4,6 +4,7 @@
 		<GlitchText />
 		<Paragraphs />
 		<LinkIcons />
+		<LocaleChanger />
 	</div>
 </template>
 
@@ -12,6 +13,7 @@ import GlitchLogo from './GlitchLogo'
 import GlitchText from './GlitchText'
 import Paragraphs from './Paragraphs'
 import LinkIcons from './LinkIcons'
+import LocaleChanger from './LocaleChanger'
 
 export default {
   name: 'Home',
@@ -19,7 +21,8 @@ export default {
     GlitchLogo,
 	GlitchText,
 	Paragraphs,
-    LinkIcons
+	LinkIcons,
+	LocaleChanger
   }
 }
 </script>
