@@ -1,9 +1,10 @@
 <template>
 	<div>
-		<a v-for="(value, key, index) in locales" 
-		v-bind:key="key" v-on:click="changeLocale(key)" href="#">
-			{{value}}<span v-if="index != Object.keys(locales).length - 1"> |</span>
-		</a>
+		<span v-for="(value, key, index) in locales" v-bind:key="key">
+			<span v-if="index == 0">|</span>
+			<a href="#" v-on:click="changeLocale(key)">{{value}}</a>
+			<span>|</span>
+		</span>
 	</div>
 </template>
 
@@ -30,3 +31,15 @@ export default {
 	}
 }
 </script>
+
+<style scoped>
+div {
+	margin-top: 20px;
+	line-height: 10px;
+}
+a {
+	font-size: 15px;
+	margin-left: 10px;
+	margin-right: 10px;
+}
+</style>
