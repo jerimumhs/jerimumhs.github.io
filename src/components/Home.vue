@@ -1,5 +1,5 @@
 <template>
-	<div class="home col-md-8 offset-md-2">
+	<div>
 		<GlitchLogo />
 		<GlitchText />
 		<Paragraphs />

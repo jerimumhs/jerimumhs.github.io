@@ -1,5 +1,5 @@
 <template>
-    <h1>Jerimum HackerSpace</h1>
+    <h1>JERIMUM HACKERSPACE</h1>
 </template>
 
 <script>

@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <Home/>
+    <Home class="home col-md-8 offset-md-2" />
   </div>
 </template>
 
