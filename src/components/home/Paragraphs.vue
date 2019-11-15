@@ -8,6 +8,12 @@
 
 <script>
 export default {
-  name: 'Paragraphs'
+	name: 'Paragraphs'
 }
 </script>
+
+<style scoped>
+div {
+	margin: 20px auto;
+}
+</style>

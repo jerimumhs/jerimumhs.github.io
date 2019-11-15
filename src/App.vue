@@ -16,12 +16,18 @@ export default {
 </script>
 
 <style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+body {
+  font-family: 'Share Tech Mono', monospace;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+  color: #fff;
+  background-color: #000;
+  margin-top: 30px;
+}
+
+a {
+  color: #ea9f77;
+  font-size: 20px;
 }
 </style>
