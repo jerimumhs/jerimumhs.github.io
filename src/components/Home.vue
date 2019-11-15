@@ -9,11 +9,11 @@
 </template>
 
 <script>
-import GlitchLogo from './GlitchLogo'
-import GlitchText from './GlitchText'
-import Paragraphs from './Paragraphs'
-import LinkIcons from './LinkIcons'
-import LocaleChanger from './LocaleChanger'
+import GlitchLogo from './home/GlitchLogo'
+import GlitchText from './home/GlitchText'
+import Paragraphs from './home/Paragraphs'
+import LinkIcons from './home/LinkIcons'
+import LocaleChanger from './home/LocaleChanger'
 
 export default {
   name: 'Home',

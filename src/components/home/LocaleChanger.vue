@@ -12,7 +12,7 @@ export default {
 	name: 'LocaleChanger',
 	data () {
 		const locales = {}
-		const LanguageObjects = require.context('../locales', true, /[A-Za-z0-9-_,\s]+\.json$/i)
+		const LanguageObjects = require.context('../../locales', true, /[A-Za-z0-9-_,\s]+\.json$/i)
 		LanguageObjects.keys().forEach(key => {
 			const matched = key.match(/([A-Za-z0-9-_]+)\./i)
 			if (matched && matched.length > 1) {
