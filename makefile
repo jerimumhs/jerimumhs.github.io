@@ -2,26 +2,14 @@
 # Docker-compose vue service commands for dev
 ################################################################################
 
-dist:
-	docker-compose run vue npm run build
-
-lint:
-	docker-compose run vue npm run lint
-
-test:
-	docker-compose run vue npm run test
-
-bash:
-	docker-compose run django bash
-
-up:
-	docker-compose up -d
-
-logs:
-	docker-compose logs -f
-
-down:
-	docker-compose down
+install:
+	npm install
 
 build:
-	docker-compose build
+	npm run build
+
+lint:
+	npm run lint
+
+serve:
+	npm run serve
