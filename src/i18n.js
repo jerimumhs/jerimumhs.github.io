@@ -17,7 +17,7 @@ function loadLocaleMessages () {
 }
 
 export default new VueI18n({
-  locale: 'pt-BR',
+  locale: window.localStorage.getItem("locale") || 'pt-BR',
   fallbackLocale: 'pt-BR',
   messages: loadLocaleMessages()
 })
