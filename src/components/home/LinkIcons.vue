@@ -1,29 +1,37 @@
 <template>
 	<div>
-		<a href='https://wiki.hackerspaces.org/Jerimum_HackerSpace'>
-			<i class="fab fa-wikipedia-w"></i>
-		</a> 
-		| 
-		<a href='https://t.me/JerimumHS'>
-			<i class="fab fa-telegram-plane"></i>
-		</a> 
-		| 
-		<a href='https://twitter.com/JerimumHS'>
-			<i class="fab fa-twitter"></i>
-		</a> 
-		| 
-		<a href='https://www.facebook.com/JerimumHS/'>
-			<i class="fab fa-facebook-f"></i>
-		</a> 
-		| 
-		<a href='https://groups.google.com/forum/#!forum/hackerspace-natal'>
-			<i class="fab fa-google"></i>
-		</a>
+		<span v-for="(value, index) in links" v-bind:key="value">
+			<a v-bind:href="value['href']">
+				<i v-bind:class="value['icon']"></i>
+			</a>
+			<span v-if="index != links.length - 1">|</span>
+		</span>
 	</div>
 </template>
 
 <script>
 export default {
-  name: 'LinkIcons'
+	name: 'LinkIcons',
+	data () {
+		return {
+			links: [
+				{"href": "https://wiki.hackerspaces.org/Jerimum_HackerSpace", "icon": "fab fa-wikipedia-w"},
+				{"href": "https://t.me/JerimumHS", "icon": "fab fa-telegram-plane"},
+				{"href": "https://twitter.com/JerimumHS", "icon": "fab fa-twitter"},
+				{"href": "https://www.facebook.com/JerimumHS/", "icon": "fab fa-facebook-f"},
+				{"href": "https://groups.google.com/forum/#!forum/hackerspace-natal", "icon": "fab fa-google"}
+			]
+		}
+	}
 }
 </script>
+
+<style scoped>
+div {
+	font-size: 22px;
+}
+a {
+	margin-left: 10px;
+	margin-right: 10px;
+}
+</style>
